@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
+import Education from './pages/Education'
+import Experience from './pages/Experience'
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="projects" element={<Projects />} />
-        {/* Add more routes here later, like /about or /resume */}
+        <Route path="education" element={<Education />} />
+        <Route path="experience" element={<Experience />} />
       </Route>
     </Routes>
   )

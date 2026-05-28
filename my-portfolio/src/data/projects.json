@@ -3,8 +3,8 @@
     "id": "engine-01",
     "title": "Custom 2D Game Engine",
     "description": "A lightweight ECS-based engine built to explore data-oriented design and cache coherency.",
-    "techStack": ["C++", "OpenGL", "Wasm"],
-    "githubUrl": "https://github.com/yourusername/engine",
-    "liveUrl": "https://yourusername.github.io/engine-demo"
+    "techStack": ["C++", "SDL3"],
+    "githubUrl": "https://github.com/SothangMeitei/ECS_Game_Engine"
   }
+  
 ]
