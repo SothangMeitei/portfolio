@@ -1,27 +1,20 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ['main'] # Ensure this matches your default branch name (main or master)
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ['main']
   workflow_dispatch:
 
-# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: 'pages'
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just building and deploying
   deploy:
     environment:
       name: github-pages
@@ -35,12 +28,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci
+        # Route into the nested folder before installing
+        working-directory: ./my-portfolio 
+        run: npm install
         
       - name: Build
+        # Route into the nested folder before building
+        working-directory: ./my-portfolio 
         run: npm run build
         
       - name: Setup Pages
@@ -49,8 +45,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: './dist'
+          # Target the dist folder inside the nested directory
+          path: './my-portfolio/dist'
           
       - name: Deploy to GitHub Pages
         id: deployment
