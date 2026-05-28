@@ -54,7 +54,7 @@ const Home = () => {
           </a>
 
           {/* LeetCode */}
-          <a href="https://leetcode.com/Sothang_Meitei" target="_blank" rel="noopener noreferrer" data-tooltip="LeetCode" aria-label="LeetCode" className="contact-icon">
+          <a href="https://leetcode.com/u/SothangMeitei/" target="_blank" rel="noopener noreferrer" data-tooltip="LeetCode" aria-label="LeetCode" className="contact-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="16 18 22 12 16 6"></polyline>
               <polyline points="8 6 2 12 8 18"></polyline>
